@@ -3,6 +3,7 @@
 /**
  * cap_string - capitalizes all words in a string
  * @str: the string to be catitalized
+ *
  * Return: a pointer to change the string
  */
 
@@ -14,7 +15,7 @@ char *cap_string(char *str)
 	{
 		while (!(str[index] >= 'a' && str[index] <= 'z'))
 			index++;
-
+		{
 			if (str[index - 1] == ' ' ||
 			str[index - 1] == '\t' ||
 			str[index - 1] == '\n' ||
@@ -32,6 +33,7 @@ char *cap_string(char *str)
 				str[index] -= 32;
 
 		index++;
+		}
 	}
 	return (str);
 }
